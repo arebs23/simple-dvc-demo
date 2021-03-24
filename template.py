@@ -10,7 +10,7 @@ dirs = [
 ]
 
 for dir_ in dirs:
-    os.makedirs(dir_, exist_ok=True)
+    os.makedirs(dir_)
     with open(os.path.join(dir_, ".gitkeep"), "w") as f:
         pass
 
@@ -25,3 +25,4 @@ files = [
 for file_ in files:
     with open(file_, "w") as f:
         pass
+    
