@@ -38,9 +38,9 @@ def api_response(request):
         error = {"error": "Something went wrong! Try again"}
         return error
 
-@app.route("/", methods = ['GET','POST'])
+@app.route("/", methods = ["GET","POST"])
 def index():
-    if request.method == 'POST':
+    if request.method == "POST":
         try:
             if request.form:
                 data = dict(request.form).values()
@@ -57,7 +57,7 @@ def index():
         
             return render_template("404.html", error = error)
     else:
-        return render_template('index.html')
+        return render_template("index.html")
 
 
 
