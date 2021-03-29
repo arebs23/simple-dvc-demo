@@ -15,7 +15,7 @@ app = Flask(__name__,static_folder=static_dir,template_folder=template_dir)
 
 def read_params(config_path):
     with open(config_path) as yaml_file:
-        config = yaml.safe_load(yaml)
+        config = yaml.safe_load(yaml_file)
     return config
 
 
@@ -28,6 +28,7 @@ def predict(data):
     return prediction[0]
 
 def api_response(request):
+    
     try:
         data = np.array([list(request.json.values())])
         response = predict(data)
