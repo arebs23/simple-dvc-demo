@@ -63,7 +63,7 @@ def validate_input(dict_request):
         _validate_values(col,val)
     return True
 
-def from_response(dict_request):
+def form_response(dict_request):
     if validate_input(dict_request):
         data = dict_request.values()
         data = [list(map(float, data))]
