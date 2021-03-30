@@ -16,7 +16,7 @@ class NotInRange(Exception):
 class NotInCols(Exception):
     def __init__(self, message = "Not in columns"):
         self.message = message
-        super().__init__(message)
+        super().__init__(self.message)
 
 
 
@@ -83,3 +83,4 @@ def api_response(request):
     except Exception as e:
         response = {"the expected_range": get_schema(), "response": str(e)}
         return response
+
