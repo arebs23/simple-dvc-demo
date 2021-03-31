@@ -3,11 +3,9 @@ name: Python application
 on:
   push:
     branches:
-    
     - main-mlflow
   pull_request:
     branches:
-   
     - main-mlflow
 
 jobs:
