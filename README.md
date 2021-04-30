@@ -72,3 +72,9 @@ build your own package commands
 ```bash
 python setup.py sdist bdist wheel
 ```
+
+view app on heroku
+```
+https://winequality-app.herokuapp.com/
+
+```
